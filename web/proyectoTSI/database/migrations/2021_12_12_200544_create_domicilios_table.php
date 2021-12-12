@@ -15,7 +15,7 @@ class CreateDomiciliosTable extends Migration
     {
         Schema::create('domicilios', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('numero',3);
+            $table->smallInteger('numero');
             $table->String('correo', 100);
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ class CreateBoletasTable extends Migration
     {
         Schema::create('boletas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger("monto", 7);
+            $table->unsignedInteger("monto");
             $table->String("mes", 10);
             $table->String("anno", 4);
             $table->unsignedBigInteger('domicilio_id');
