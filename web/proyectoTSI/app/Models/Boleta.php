@@ -10,4 +10,11 @@ class Boleta extends Model
     use HasFactory;
     
     protected $table = "boletas";
+    //boleta
+    public function gastos(){
+        return $this->hasMany(Gasto::class);
+    }
+    public function domicilios(){
+        return $this->belongsTo(Domicilio::class);
+    }
 }

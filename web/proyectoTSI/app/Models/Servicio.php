@@ -9,4 +9,7 @@ class Servicio extends Model
 {
     use HasFactory;
     protected $table = "servicios";
+    public function gastos(){
+        return $this->hasMany(Gasto::class);
+    }
 }

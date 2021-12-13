@@ -9,4 +9,17 @@ class Gasto extends Model
 {
     use HasFactory;
     protected $table = "gastos";
+    
+    public function servicios(){
+        return $this->belongsTo(Servicio::class);
+    }
+    public function reparaciones(){
+        return $this->belongsTo(Reparacion::class);
+    }
+    public function domicilios(){
+        return $this->belongsTo(Domicilio::class);
+    }
+    public function boletas(){
+        return $this->belongsTo(Boletas::class);
+    }
 }

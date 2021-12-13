@@ -14,7 +14,7 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        //
+        return Servicio::all();
     }
 
     /**
@@ -35,7 +35,14 @@ class ServiciosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $servicio = new Servicio();
+        $servicio->mes = $request->mes;
+        $servicio->anno= $request->anno;
+        $servicio->tipo= $request->tipo;
+        $servicio->consumo = $request->consumo;
+        $servicio->monto = $request->monto;
+        $servicio->save();
+        return $servicio;
     }
 
     /**
@@ -47,6 +54,7 @@ class ServiciosController extends Controller
     public function show(Servicio $servicio)
     {
         //
+        return $servicio;
     }
 
     /**
@@ -69,7 +77,13 @@ class ServiciosController extends Controller
      */
     public function update(Request $request, Servicio $servicio)
     {
-        //
+        $servicio->mes = $request->mes;
+        $servicio->anno= $request->anno;
+        $servicio->tipo= $request->tipo;
+        $servicio->consumo = $request->consumo;
+        $servicio->monto = $request->monto;
+        $servicio->save();
+        return $servicio;
     }
 
     /**
@@ -80,6 +94,6 @@ class ServiciosController extends Controller
      */
     public function destroy(Servicio $servicio)
     {
-        //
+        $servicio->delete();
     }
 }
