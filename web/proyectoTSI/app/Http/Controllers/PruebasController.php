@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Boleta;
+use App\Models\Prueba;
 use Illuminate\Http\Request;
 
-class BoletasController extends Controller
+class PruebasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +14,7 @@ class BoletasController extends Controller
      */
     public function index()
     {
-        //llama a todos los elementos de la tabla
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //crear
+        return Prueba::All();
     }
 
     /**
@@ -41,45 +31,34 @@ class BoletasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Boleta  $boleta
+     * @param  \App\Models\Prueba  $prueba
      * @return \Illuminate\Http\Response
      */
-    public function show(Boleta $boleta)
+    public function show(Prueba $prueba)
     {
-        //mostrar
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Boleta  $boleta
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Boleta $boleta)
-    {
-        //editar
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Boleta  $boleta
+     * @param  \App\Models\Prueba  $prueba
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Boleta $boleta)
+    public function update(Request $request, Prueba $prueba)
     {
-        //updatear
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Boleta  $boleta
+     * @param  \App\Models\Prueba  $prueba
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Boleta $boleta)
+    public function destroy(Prueba $prueba)
     {
-        //eliminar
+        //
     }
 }

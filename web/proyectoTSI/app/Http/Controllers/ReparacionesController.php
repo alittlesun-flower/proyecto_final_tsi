@@ -14,7 +14,7 @@ class ReparacionesController extends Controller
      */
     public function index()
     {
-        //
+        return Reparacion::all();
     }
 
     /**
